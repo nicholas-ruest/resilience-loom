@@ -5,7 +5,7 @@ cd "$ROOT"
 E=${DREAM_MACHINE_EVIDENCE_DIR:?external evidence directory required}
 GATE=(node scripts/dream-machine-product-gate.mjs record "$ROOT" "$E")
 export PATH=/home/ruv/.local/share/dream-machine/runtime/node-v24.21.0-linux-x64/bin:/home/ruv/.cargo/bin:$PATH
-export PLAYWRIGHT_BROWSERS_PATH=${PLAYWRIGHT_BROWSERS_PATH:-/home/ruv/.cache/ms-playwright}
+export PLAYWRIGHT_BROWSERS_PATH=${PLAYWRIGHT_BROWSERS_PATH:-$HOME/.cache/ms-playwright}
 export CARGO_TARGET_DIR=${CARGO_TARGET_DIR:-/tmp/resilience-loom-target}
 status=0
 record() {
