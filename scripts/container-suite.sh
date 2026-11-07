@@ -2,7 +2,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
-export TMPDIR=/home/ruv/.cache/podman-tmp
+export TMPDIR=${TMPDIR:-/tmp/resilience-loom-container-tmp}
 mkdir -p "$TMPDIR"
 if command -v podman >/dev/null 2>&1; then runtime=podman; elif command -v docker >/dev/null 2>&1; then runtime=docker; else echo 'no container runtime' >&2; exit 1; fi
 tag=${DREAM_MACHINE_SOURCE_SHA:-local}
