@@ -32,7 +32,6 @@ jobs:
       - name: Canonical full product verification
         env:
           DREAM_MACHINE_EVIDENCE_DIR: ${{ runner.temp }}/resilience-loom-evidence
-          PLAYWRIGHT_BROWSERS_PATH: ~/.cache/ms-playwright
         run: ./scripts/verify-prototype.sh
       - name: Upload exact-source evidence
         if: always()
