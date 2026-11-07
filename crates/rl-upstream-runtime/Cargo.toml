@@ -1,0 +1,13 @@
+[package]
+name="rl-upstream-runtime"
+version.workspace=true
+edition.workspace=true
+rust-version.workspace=true
+license.workspace=true
+[dependencies]
+rl-types={path="../rl-types"}
+serde_json={workspace=true}
+[lints]
+workspace=true
+[dev-dependencies]
+tempfile={workspace=true}

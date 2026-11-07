@@ -1,0 +1,14 @@
+[package]
+name="rl-policy"
+version.workspace=true
+edition.workspace=true
+rust-version.workspace=true
+license.workspace=true
+
+[dependencies]
+rl-regorus={path="../rl-regorus"}
+rl-types={path="../rl-types"}
+rl-errors={path="../rl-errors"}
+
+[lints]
+workspace=true

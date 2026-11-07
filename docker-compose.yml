@@ -1,0 +1,11 @@
+services:
+  api:
+    build: {context: ., dockerfile: Dockerfile.backend}
+    environment: {MM_BIND: '0.0.0.0:18080', MM_DATA: '/data/recovery-plans.rvf', MM_TOKEN: 'demo-token'}
+    volumes: [recovery-plans:/data]
+    ports: ['18080:18080']
+  web:
+    build: {context: ., dockerfile: Dockerfile.frontend}
+    ports: ['5173:80']
+    depends_on: [api]
+volumes: {recovery-plans: {}}

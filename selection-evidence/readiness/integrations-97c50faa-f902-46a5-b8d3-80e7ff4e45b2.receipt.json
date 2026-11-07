@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "af0ed87fe1bb4c1242a5f87a9b3cee588566b9cf",
+  "argv": [
+    "./probe.sh",
+    "agentdb",
+    "failure"
+  ],
+  "started_at": "2026-11-07T03:26:34.847Z",
+  "ended_at": "2026-11-07T03:26:35.814Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "readiness/integrations-97c50faa-f902-46a5-b8d3-80e7ff4e45b2.log",
+  "log_sha256": "cc024d75465759714fda2878fb6f4d7a5f6f390a5bf39218eb9ada41bc33915f"
+}

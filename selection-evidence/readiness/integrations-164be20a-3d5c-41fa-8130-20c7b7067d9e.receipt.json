@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "af0ed87fe1bb4c1242a5f87a9b3cee588566b9cf",
+  "argv": [
+    "./probe.sh",
+    "opentelemetry",
+    "success"
+  ],
+  "started_at": "2026-11-07T03:26:42.115Z",
+  "ended_at": "2026-11-07T03:26:42.279Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "readiness/integrations-164be20a-3d5c-41fa-8130-20c7b7067d9e.log",
+  "log_sha256": "7a4e0185fcf9a88737a2281870e363560def47dafda701011f94f1a98d7c02df"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "af0ed87fe1bb4c1242a5f87a9b3cee588566b9cf",
+  "argv": [
+    "./probe.sh",
+    "regorus",
+    "failure"
+  ],
+  "started_at": "2026-11-07T03:26:41.887Z",
+  "ended_at": "2026-11-07T03:26:42.055Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "readiness/integrations-1d8f753b-d71d-476d-a430-cc583c05d94f.log",
+  "log_sha256": "6c7280f3152230953d63e90c1070d170fdb86ff0667cb08e3de5c4adb8aadf49"
+}

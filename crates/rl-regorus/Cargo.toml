@@ -1,0 +1,14 @@
+[package]
+name="rl-regorus"
+version.workspace=true
+edition.workspace=true
+rust-version.workspace=true
+license.workspace=true
+
+[dependencies]
+rl-errors={path="../rl-errors"}
+regorus={workspace=true}
+serde_json={workspace=true}
+
+[lints]
+workspace=true

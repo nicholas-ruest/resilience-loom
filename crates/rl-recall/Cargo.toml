@@ -1,0 +1,15 @@
+[package]
+name="rl-recall"
+version.workspace=true
+edition.workspace=true
+rust-version.workspace=true
+license.workspace=true
+
+[dependencies]
+rl-ruvector={path="../rl-ruvector"}
+rl-embedding={path="../rl-embedding"}
+rl-types={path="../rl-types"}
+rl-errors={path="../rl-errors"}
+
+[lints]
+workspace=true

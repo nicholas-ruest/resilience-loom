@@ -1,0 +1,16 @@
+openapi: 3.1.0
+info: {title: Resilience Loom API, version: 1.0.0}
+servers: [{url: http://127.0.0.1:18080}]
+paths:
+  /healthz:
+    get: {responses: {'200': {description: Ready}}}
+  /v1/recovery-plans:
+    get: {security: [{bearerAuth: []}], responses: {'200': {description: RecoveryPlans}}}
+    post:
+      security: [{bearerAuth: []}]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/CreateRecoveryPlan'}}}}
+      responses: {'201': {description: Issued}, '403': {description: Denied}, '422': {description: Invalid}}
+components:
+  securitySchemes: {bearerAuth: {type: http, scheme: bearer}}
+  schemas:
+    CreateRecoveryPlan: {type: object, required: [objective, sensitivity], properties: {objective: {type: string, minLength: 12}, sensitivity: {type: string, enum: [public, internal, restricted]}}}

@@ -1,0 +1,13 @@
+[package]
+name="rl-task-graph"
+version.workspace=true
+edition.workspace=true
+rust-version.workspace=true
+license.workspace=true
+
+[dependencies]
+rl-types={path="../rl-types"}
+rl-errors={path="../rl-errors"}
+
+[lints]
+workspace=true

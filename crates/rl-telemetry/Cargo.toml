@@ -1,0 +1,11 @@
+[package]
+name="rl-telemetry"
+version.workspace=true
+edition.workspace=true
+rust-version.workspace=true
+license.workspace=true
+[dependencies]
+opentelemetry="0.31.0"
+opentelemetry_sdk="0.31.0"
+[lints]
+workspace=true

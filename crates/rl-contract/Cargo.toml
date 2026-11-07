@@ -1,0 +1,17 @@
+[package]
+name="rl-contract"
+version.workspace=true
+edition.workspace=true
+rust-version.workspace=true
+license.workspace=true
+
+[dependencies]
+rl-types={path="../rl-types"}
+rl-team={path="../rl-team"}
+rl-errors={path="../rl-errors"}
+sha2={workspace=true}
+hex={workspace=true}
+serde_json={workspace=true}
+
+[lints]
+workspace=true

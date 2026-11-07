@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "af0ed87fe1bb4c1242a5f87a9b3cee588566b9cf",
+  "argv": [
+    "./probe.sh",
+    "sublinear",
+    "success"
+  ],
+  "started_at": "2026-11-07T03:26:39.899Z",
+  "ended_at": "2026-11-07T03:26:41.387Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "readiness/integrations-e0defc18-1082-411b-9d79-893520f0035e.log",
+  "log_sha256": "87c9ce3fe41021e81a7e9ce35e534c3ed68967e4ecc9ae388076851d606be27b"
+}

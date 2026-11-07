@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "af0ed87fe1bb4c1242a5f87a9b3cee588566b9cf",
+  "argv": [
+    "./probe.sh",
+    "ruvector",
+    "success"
+  ],
+  "started_at": "2026-11-07T03:26:30.227Z",
+  "ended_at": "2026-11-07T03:26:31.255Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "readiness/integrations-ca72d624-48fe-49d8-b4b1-8c72ca90eb2c.log",
+  "log_sha256": "dfc66ebbb8d2da3ac98c39f04c0e9813c261df90371a97f8c4a5d5904479c6bd"
+}

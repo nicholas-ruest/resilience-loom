@@ -1,0 +1,15 @@
+[package]
+name="rl-middleware"
+version.workspace=true
+edition.workspace=true
+rust-version.workspace=true
+license.workspace=true
+
+[dependencies]
+rl-auth={path="../rl-auth"}
+rl-errors={path="../rl-errors"}
+rl-types={path="../rl-types"}
+uuid={workspace=true}
+
+[lints]
+workspace=true

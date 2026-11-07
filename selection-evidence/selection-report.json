@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "attempt_id": "dream-machine-2026-11-06-resilience-loom",
+  "date": "2026-11-06",
+  "probe_source_sha": "af0ed87fe1bb4c1242a5f87a9b3cee588566b9cf",
+  "selected_at": "2026-11-07T03:28:23.475Z",
+  "product": {
+    "users": "site reliability and incident command teams",
+    "capability": "turn correlated production signals into policy-safe, explainable, restart-durable recovery plans",
+    "bounded_contexts": [
+      "incident evidence",
+      "recovery planning",
+      "governed execution",
+      "audit retrieval"
+    ],
+    "topology": {
+      "frontend": "React and TypeScript incident command surface",
+      "backend": "Axum Rust composition root spanning 29 product crates",
+      "middleware": "ordered authn authz policy validation errors correlation timeouts observability",
+      "persistence": "authorized local RVF and append-only audit storage"
+    },
+    "workflows": [
+      {
+        "name": "primary",
+        "user_outcome": "produce and render a policy-authorized recovery plan using all selected upstreams"
+      },
+      {
+        "name": "denial-recovery",
+        "user_outcome": "deny unsafe execution with no write, then recover with corrected evidence"
+      },
+      {
+        "name": "durable-retrieval",
+        "user_outcome": "retrieve the saved plan after browser refresh and backend restart"
+      }
+    ]
+  },
+  "shortlist": [
+    {
+      "repo": "ruvnet/RuVector",
+      "category": "ruvnet",
+      "revision": "e3d82b19683a08c6392a2534bafc90927ca690c7",
+      "license": "MIT",
+      "capability": "durable vector incident analogue retrieval",
+      "rationale": "selected for deterministic recovery memory",
+      "decision": "selected",
+      "source_url": "https://github.com/ruvnet/RuVector/tree/e3d82b19683a08c6392a2534bafc90927ca690c7"
+    },
+    {
+      "repo": "ruvnet/agentdb",
+      "category": "ruvnet",
+      "revision": "96c4780cd8b7d743e2745216e5ad036059ffc25a",
+      "license": "MIT",
+      "capability": "local RVF-backed operational memory",
+      "rationale": "selected for in-workflow memory search",
+      "decision": "selected",
+      "source_url": "https://github.com/ruvnet/agentdb/tree/96c4780cd8b7d743e2745216e5ad036059ffc25a"
+    },
+    {
+      "repo": "ruvnet/dspy.ts",
+      "category": "ruvnet",
+      "revision": "fbaa7113fde231f26be051a8dc704571e8b2a8a5",
+      "license": "MIT",
+      "capability": "typed recovery program optimization",
+      "rationale": "selected for evidence-grounded playbook compilation",
+      "decision": "selected",
+      "source_url": "https://github.com/ruvnet/dspy.ts/tree/fbaa7113fde231f26be051a8dc704571e8b2a8a5"
+    },
+    {
+      "repo": "ruvnet/ruflo",
+      "category": "ruvnet",
+      "revision": "b7bc909d5f0d60c74fc965113af2d5af3d506938",
+      "license": "MIT",
+      "capability": "hierarchical response coordination",
+      "rationale": "selected for runtime recovery swarm planning",
+      "decision": "selected",
+      "source_url": "https://github.com/ruvnet/ruflo/tree/b7bc909d5f0d60c74fc965113af2d5af3d506938"
+    },
+    {
+      "repo": "ruvnet/sublinear-time-solver",
+      "category": "ruvnet",
+      "revision": "41175473700b7be65ce5e834dad12de3f20da15f",
+      "license": "MIT",
+      "capability": "constrained recovery resource solving",
+      "rationale": "selected for fast intervention allocation",
+      "decision": "selected",
+      "source_url": "https://github.com/ruvnet/sublinear-time-solver/tree/41175473700b7be65ce5e834dad12de3f20da15f"
+    },
+    {
+      "repo": "ruvnet/ruv-FANN",
+      "category": "ruvnet",
+      "revision": "f4ca36c2323d08eac822bac43b62040198721cbf",
+      "license": "MIT",
+      "capability": "neural inference",
+      "rationale": "overlaps DSPy scoring without complementary product value",
+      "decision": "rejected",
+      "source_url": "https://github.com/ruvnet/ruv-FANN/tree/f4ca36c2323d08eac822bac43b62040198721cbf"
+    },
+    {
+      "repo": "ruvnet/QuDAG",
+      "category": "ruvnet",
+      "revision": "7ec92a90e8f6a5dbc6d7f801703eff213c8acfa9",
+      "license": "MIT",
+      "capability": "quantum-resistant distributed coordination",
+      "rationale": "cryptographic network scope exceeds local incident workflow",
+      "decision": "rejected",
+      "source_url": "https://github.com/ruvnet/QuDAG/tree/7ec92a90e8f6a5dbc6d7f801703eff213c8acfa9"
+    },
+    {
+      "repo": "ruvnet/FACT",
+      "category": "ruvnet",
+      "revision": "b0e343583cd8f64549dbcba4b7c709e48b3a6a08",
+      "license": "MIT",
+      "capability": "reasoning cache",
+      "rationale": "selected stack already provides deterministic local evidence memory",
+      "decision": "rejected",
+      "source_url": "https://github.com/ruvnet/FACT/tree/b0e343583cd8f64549dbcba4b7c709e48b3a6a08"
+    },
+    {
+      "repo": "ruvnet/agentic-flow",
+      "category": "ruvnet",
+      "revision": "fed69f498c0f350f26e37b3e33ab57b1e327a26f",
+      "license": "MIT",
+      "capability": "agent workflow runtime",
+      "rationale": "Ruflo supplies the narrower required runtime boundary",
+      "decision": "rejected",
+      "source_url": "https://github.com/ruvnet/agentic-flow/tree/fed69f498c0f350f26e37b3e33ab57b1e327a26f"
+    },
+    {
+      "repo": "ruvnet/metaharness",
+      "category": "ruvnet",
+      "revision": "574ce3b881e902d23472a541f9f9e2fdccfa63db",
+      "license": "MIT",
+      "capability": "benchmark harness",
+      "rationale": "build-time evaluation is not a distinct runtime responsibility",
+      "decision": "rejected",
+      "source_url": "https://github.com/ruvnet/metaharness/tree/574ce3b881e902d23472a541f9f9e2fdccfa63db"
+    },
+    {
+      "repo": "microsoft/regorus",
+      "category": "enterprise",
+      "revision": "b94fc6bbda74d5d626321254bc4f2d8a9dddded9",
+      "license": "MIT",
+      "capability": "embedded Rego authorization",
+      "rationale": "selected for denial-before-effects policy",
+      "decision": "selected",
+      "source_url": "https://github.com/microsoft/regorus/tree/b94fc6bbda74d5d626321254bc4f2d8a9dddded9"
+    },
+    {
+      "repo": "open-telemetry/opentelemetry-rust",
+      "category": "enterprise",
+      "revision": "285dc925f98403ff426acc70968f104dc820d4f2",
+      "license": "Apache-2.0",
+      "capability": "trace correlation and observability",
+      "rationale": "selected for source-correlated spans",
+      "decision": "selected",
+      "source_url": "https://github.com/open-telemetry/opentelemetry-rust/tree/285dc925f98403ff426acc70968f104dc820d4f2"
+    },
+    {
+      "repo": "cedar-policy/cedar",
+      "category": "enterprise",
+      "revision": "5af7b8cd78e4e0da3ae23f1715023fff8e62941d",
+      "license": "Apache-2.0",
+      "capability": "policy authorization",
+      "rationale": "rejected to rotate beyond recent Cedar usage",
+      "decision": "rejected",
+      "source_url": "https://github.com/cedar-policy/cedar/tree/5af7b8cd78e4e0da3ae23f1715023fff8e62941d"
+    },
+    {
+      "repo": "open-policy-agent/opa",
+      "category": "enterprise",
+      "revision": "b04b69a0a1a99526635d3ffad953bfe3d6b2751a",
+      "license": "Apache-2.0",
+      "capability": "external policy service",
+      "rationale": "embedded Regorus avoids an unnecessary service boundary",
+      "decision": "rejected",
+      "source_url": "https://github.com/open-policy-agent/opa/tree/b04b69a0a1a99526635d3ffad953bfe3d6b2751a"
+    },
+    {
+      "repo": "apache/datafusion",
+      "category": "enterprise",
+      "revision": "8acb40dcb7a1d3afaa88c5d5caf5554324c2207f",
+      "license": "Apache-2.0",
+      "capability": "columnar analytics",
+      "rationale": "too heavy for bounded recovery decisions and duplicates domain aggregation",
+      "decision": "rejected",
+      "source_url": "https://github.com/apache/datafusion/tree/8acb40dcb7a1d3afaa88c5d5caf5554324c2207f"
+    }
+  ],
+  "dependencies": [
+    {
+      "repo": "ruvnet/RuVector",
+      "category": "ruvnet",
+      "revision": "e3d82b19683a08c6392a2534bafc90927ca690c7",
+      "license": "MIT",
+      "responsibility": "persist and retrieve durable incident analogue vectors",
+      "binding": "locked Rust crate",
+      "test_path": "probe.sh ruvector success|failure",
+      "probes": {
+        "success": {
+          "path": "readiness/integrations-ca72d624-48fe-49d8-b4b1-8c72ca90eb2c.receipt.json",
+          "sha256": "c55b3cda56381aa0aaa4eb7054749388c11578d9fe2a4550f73f1bd169ff03ac"
+        },
+        "failure": {
+          "path": "readiness/integrations-616bc345-78a4-46f9-b774-ca256a7a7f1f.receipt.json",
+          "sha256": "8a6d0ea7d1ddd688fce39a4deef2f972d61b14bfc6d697599fa06d20c2ffc332"
+        }
+      }
+    },
+    {
+      "repo": "ruvnet/agentdb",
+      "category": "ruvnet",
+      "revision": "96c4780cd8b7d743e2745216e5ad036059ffc25a",
+      "license": "MIT",
+      "responsibility": "search runtime evidence memory through RVF WASM",
+      "binding": "locked npm package executed by Node boundary",
+      "test_path": "probe.sh agentdb success|failure",
+      "probes": {
+        "success": {
+          "path": "readiness/integrations-08462a21-fda8-48e6-accb-415c9ffad730.receipt.json",
+          "sha256": "4b25c01a1b79d83a08b73247f8452cfd39691c89b8616ff2afc6b04290991e4e"
+        },
+        "failure": {
+          "path": "readiness/integrations-97c50faa-f902-46a5-b8d3-80e7ff4e45b2.receipt.json",
+          "sha256": "d994a5d45b27fdf8857226c1a318a5a8faaf4792f6ee151b70575b5e0014bce6"
+        }
+      }
+    },
+    {
+      "repo": "ruvnet/dspy.ts",
+      "category": "ruvnet",
+      "revision": "fbaa7113fde231f26be051a8dc704571e8b2a8a5",
+      "license": "MIT",
+      "responsibility": "compile typed evidence-grounded recovery programs",
+      "binding": "locked npm package executed by Node boundary",
+      "test_path": "probe.sh dspy success|failure",
+      "probes": {
+        "success": {
+          "path": "readiness/integrations-96ec0f3c-dc2d-4108-8524-8ab48f13e178.receipt.json",
+          "sha256": "6cbc97cf7328a5bf02714f83cd854c0e882fe7db276b8e6cca4eb66e00dc4479"
+        },
+        "failure": {
+          "path": "readiness/integrations-5df64715-2d7c-4cca-991b-2126f4e356af.receipt.json",
+          "sha256": "7b0f0f36422f095234de7809fd84937b5dad5aeb7c7afd18af139573380926dd"
+        }
+      }
+    },
+    {
+      "repo": "ruvnet/ruflo",
+      "category": "ruvnet",
+      "revision": "b7bc909d5f0d60c74fc965113af2d5af3d506938",
+      "license": "MIT",
+      "responsibility": "initialize hierarchical recovery coordination plans",
+      "binding": "locked npm package executed by Node boundary",
+      "test_path": "probe.sh ruflo success|failure",
+      "probes": {
+        "success": {
+          "path": "readiness/integrations-571f1db4-c048-41a8-8ec1-a8e6829025c3.receipt.json",
+          "sha256": "8a4b966d42d5a3c5bf603e37478d048f3648bafbd2165337ae87bf9c272c2fa4"
+        },
+        "failure": {
+          "path": "readiness/integrations-c0fa841a-add4-4fe3-9c8d-d4a496c678b3.receipt.json",
+          "sha256": "c3214874b694cccc703c917a33d6bd0af99eb804aa8c4ac8214cd85989752672"
+        }
+      }
+    },
+    {
+      "repo": "ruvnet/sublinear-time-solver",
+      "category": "ruvnet",
+      "revision": "41175473700b7be65ce5e834dad12de3f20da15f",
+      "license": "MIT",
+      "responsibility": "solve constrained intervention allocation",
+      "binding": "locked npm package executed by Node boundary",
+      "test_path": "probe.sh sublinear success|failure",
+      "probes": {
+        "success": {
+          "path": "readiness/integrations-e0defc18-1082-411b-9d79-893520f0035e.receipt.json",
+          "sha256": "c0ab57a6c0b67a363a9c69545b9a2591354407e0f82bd13824499af9d3695d9f"
+        },
+        "failure": {
+          "path": "readiness/integrations-5843227f-4de2-4ea5-b94c-a296b71872fc.receipt.json",
+          "sha256": "101fd9ab33e789721fbd518c2ba51d3e21f736d81840afccf3517d8e35654133"
+        }
+      }
+    },
+    {
+      "repo": "microsoft/regorus",
+      "category": "enterprise",
+      "revision": "b94fc6bbda74d5d626321254bc4f2d8a9dddded9",
+      "license": "MIT",
+      "responsibility": "authorize recovery plans before downstream effects",
+      "binding": "locked Rust crate",
+      "test_path": "probe.sh regorus success|failure",
+      "probes": {
+        "success": {
+          "path": "readiness/integrations-8e84f531-1edd-4b4f-b8a2-3651fc12f7c6.receipt.json",
+          "sha256": "21051837c257dec4ebf7391b9f726256685a07edbe622eb452dc6695fa3635f2"
+        },
+        "failure": {
+          "path": "readiness/integrations-1d8f753b-d71d-476d-a430-cc583c05d94f.receipt.json",
+          "sha256": "109cf30fe8545d6f7918009e8453a31c9a3bed30ae570e5dc649e263095e0c94"
+        }
+      }
+    },
+    {
+      "repo": "open-telemetry/opentelemetry-rust",
+      "category": "enterprise",
+      "revision": "285dc925f98403ff426acc70968f104dc820d4f2",
+      "license": "Apache-2.0",
+      "responsibility": "emit correlated application and dependency spans",
+      "binding": "locked Rust crate",
+      "test_path": "probe.sh opentelemetry success|failure",
+      "probes": {
+        "success": {
+          "path": "readiness/integrations-164be20a-3d5c-41fa-8130-20c7b7067d9e.receipt.json",
+          "sha256": "40268e12df2ab80f4ba975aef7fe12364bf54c77dd207457c4037e62b7e9eaa3"
+        },
+        "failure": {
+          "path": "readiness/integrations-c2e754af-8eb2-4eaf-add2-dd32a5d4e215.receipt.json",
+          "sha256": "ebd18e20ef60465b39c34aea80914c659887ec216c3b6a39fab0c81fad433279"
+        }
+      }
+    }
+  ],
+  "probe_source_archive": {
+    "path": "readiness/probe-source.tar.gz",
+    "sha256": "83f018de9652bca28c7a571e13e231b489c078b7d8ecb3f8c2c2f45b746586c4"
+  },
+  "history_status": "VERIFIED_ATTEMPTS",
+  "history": [
+    {
+      "attempt_id": "context-bastion-2026-10-29",
+      "attempted_at": "2026-10-29T02:21:24Z",
+      "status": "BUILT",
+      "source_sha": "6e546aeb71a1e2e5976e1c23a733bcc9e1a82da9",
+      "evidence_url": "https://github.com/nicholas-ruest/context-bastion/commit/6e546aeb71a1e2e5976e1c23a733bcc9e1a82da9",
+      "selected_dependencies": [
+        {
+          "repo": "ruvnet/RuVector",
+          "category": "ruvnet"
+        },
+        {
+          "repo": "microsoft/regorus",
+          "category": "enterprise"
+        }
+      ],
+      "executed_dependencies": [
+        {
+          "repo": "ruvnet/RuVector",
+          "category": "ruvnet"
+        },
+        {
+          "repo": "microsoft/regorus",
+          "category": "enterprise"
+        }
+      ]
+    },
+    {
+      "attempt_id": "contract-current-2026-10-27",
+      "attempted_at": "2026-10-27T02:11:24Z",
+      "status": "BUILT",
+      "source_sha": "3bd6886139436a9d19379933b6008517b12d15a5",
+      "evidence_url": "https://github.com/nicholas-ruest/contract-current/commit/3bd6886139436a9d19379933b6008517b12d15a5",
+      "selected_dependencies": [
+        {
+          "repo": "ruvnet/RuVector",
+          "category": "ruvnet"
+        },
+        {
+          "repo": "cedar-policy/cedar",
+          "category": "enterprise"
+        }
+      ],
+      "executed_dependencies": [
+        {
+          "repo": "ruvnet/RuVector",
+          "category": "ruvnet"
+        },
+        {
+          "repo": "cedar-policy/cedar",
+          "category": "enterprise"
+        }
+      ]
+    },
+    {
+      "attempt_id": "mandate-mesh-2026-10-26",
+      "attempted_at": "2026-10-26T02:25:07Z",
+      "status": "BUILT",
+      "source_sha": "fa6e7ce708528d2a2a1d466d5524e99da2930323",
+      "evidence_url": "https://github.com/nicholas-ruest/mandate-mesh/commit/fa6e7ce708528d2a2a1d466d5524e99da2930323",
+      "selected_dependencies": [
+        {
+          "repo": "ruvnet/RuVector",
+          "category": "ruvnet"
+        },
+        {
+          "repo": "microsoft/regorus",
+          "category": "enterprise"
+        }
+      ],
+      "executed_dependencies": [
+        {
+          "repo": "ruvnet/RuVector",
+          "category": "ruvnet"
+        },
+        {
+          "repo": "microsoft/regorus",
+          "category": "enterprise"
+        }
+      ]
+    }
+  ]
+}

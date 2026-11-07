@@ -1,0 +1,29 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: resilience-loom
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: "4"
+    spec:
+      serviceAccountName: AUTHORIZED_IAM_SERVICE_ACCOUNT
+      containers:
+        - image: IMAGE_REQUIRES_AUTHORIZED_PUBLISH
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MM_BIND
+              value: 0.0.0.0:8080
+            - name: MM_DATA
+              value: /tmp/recovery-plans.rvf
+            - name: MM_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  key: latest
+                  name: resilience-loom-token
+          startupProbe:
+            httpGet:
+              path: /readyz
+              port: 8080

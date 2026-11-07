@@ -1,0 +1,12 @@
+[package]
+name="rl-config"
+version.workspace=true
+edition.workspace=true
+rust-version.workspace=true
+license.workspace=true
+
+[dependencies]
+rl-errors={path="../rl-errors"}
+
+[lints]
+workspace=true

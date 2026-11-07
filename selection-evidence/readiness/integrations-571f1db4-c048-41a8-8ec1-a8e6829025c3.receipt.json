@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "af0ed87fe1bb4c1242a5f87a9b3cee588566b9cf",
+  "argv": [
+    "./probe.sh",
+    "ruflo",
+    "success"
+  ],
+  "started_at": "2026-11-07T03:26:37.649Z",
+  "ended_at": "2026-11-07T03:26:39.207Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "readiness/integrations-571f1db4-c048-41a8-8ec1-a8e6829025c3.log",
+  "log_sha256": "89abe3d56624652db089b9296f0699e8d72149b5cbbaac8b075f39f32064a8ae"
+}

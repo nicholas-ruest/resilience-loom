@@ -1,0 +1,16 @@
+FROM docker.io/library/rust:1.99-bookworm AS build
+WORKDIR /app
+COPY . .
+RUN cargo build --locked --release -p rl-cli && cp target/release/rl-cli /tmp/resilience-loom && rm -rf target
+
+FROM docker.io/library/node:24-bookworm-slim
+WORKDIR /app
+COPY upstreams/package.json upstreams/package-lock.json ./upstreams/
+COPY upstreams/vendor ./upstreams/vendor
+RUN npm --prefix upstreams ci --ignore-scripts --legacy-peer-deps --omit=optional --no-audit --no-fund
+COPY upstreams/resilience-engine.mjs ./upstreams/resilience-engine.mjs
+COPY policies ./policies
+COPY --from=build /tmp/resilience-loom /usr/local/bin/resilience-loom
+ENV RESILIENCE_LOOM_UPSTREAM_SCRIPT=/app/upstreams/resilience-engine.mjs
+EXPOSE 18080
+CMD ["resilience-loom"]

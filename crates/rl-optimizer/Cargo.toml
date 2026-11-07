@@ -1,0 +1,17 @@
+[package]
+name="rl-optimizer"
+version.workspace=true
+edition.workspace=true
+rust-version.workspace=true
+license.workspace=true
+
+[dependencies]
+rl-team={path="../rl-team"}
+rl-types={path="../rl-types"}
+rl-errors={path="../rl-errors"}
+
+[lints]
+workspace=true
+
+[dev-dependencies]
+rl-agent={path="../rl-agent"}

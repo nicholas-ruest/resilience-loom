@@ -1,0 +1,43 @@
+name: full-product-gate
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  full-product:
+    name: Full product gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.99.1
+        with:
+          components: rustfmt, clippy
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.21.0
+          cache: npm
+          cache-dependency-path: |
+            frontend/package-lock.json
+            upstreams/package-lock.json
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-deny
+      - name: Install locked dependencies
+        run: |
+          cargo fetch --locked
+          npm --prefix frontend ci
+          npm --prefix upstreams ci --ignore-scripts --legacy-peer-deps --omit=optional --no-audit --no-fund
+          npx --prefix frontend playwright install --with-deps chromium
+      - name: Canonical full product verification
+        env:
+          DREAM_MACHINE_EVIDENCE_DIR: ${{ runner.temp }}/resilience-loom-evidence
+          PLAYWRIGHT_BROWSERS_PATH: ~/.cache/ms-playwright
+        run: ./scripts/verify-prototype.sh
+      - name: Upload exact-source evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resilience-loom-evidence-${{ github.sha }}
+          path: ${{ runner.temp }}/resilience-loom-evidence/**
+          if-no-files-found: warn

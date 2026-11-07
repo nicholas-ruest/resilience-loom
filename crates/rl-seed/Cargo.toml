@@ -1,0 +1,13 @@
+[package]
+name="rl-seed"
+version.workspace=true
+edition.workspace=true
+rust-version.workspace=true
+license.workspace=true
+
+[dependencies]
+rl-agent={path="../rl-agent"}
+rl-types={path="../rl-types"}
+
+[lints]
+workspace=true

@@ -1,0 +1,5 @@
+✅ Using sql.js (WASM SQLite, no build tools required)
+Transformers.js loaded: Xenova/all-MiniLM-L6-v2
+[AgentDB] Using RuVector backend (native)
+[AgentDB] Initialized with sql.js WASM + ruvector vector backend
+AGENTDB_RVF_SEARCH_PASS
